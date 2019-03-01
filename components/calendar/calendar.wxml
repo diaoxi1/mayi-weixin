@@ -1,0 +1,26 @@
+<view class="calendar">
+	<!-- <view class='tit'>
+		<view class='pre' bindtap='gotoPreMonth'>{{'<'}}</view>
+		<view class='current'>{{currentYear}}年{{currentMonth}}月</view>
+		<view class='next' bindtap='gotoNextMonth'>{{'>'}}</view>
+	</view> -->
+  <view class='tit'>
+		<view class='current'>{{currentYear}}年{{currentMonth}}月</view>
+	</view>
+	<view class='content'>
+		<view>日</view>
+		<view>一</view>
+		<view>二</view>
+		<view>三</view>
+		<view>四</view>
+		<view>五</view>
+		<view>六</view>
+		<view 
+			wx:for="{{allArr}}" 
+			wx:key="*this"
+      data-selectIndex="{{item.befor ? '' : index}}"
+			class="{{item.month == 'current' ? '' : 'gray'}} {{item.befor&&item.month!='pre' ? 'befor' : ''}} {{selectIndex[index].sureid&&!item.befor? 'checked' : ''}}"
+      bindtap="{{item.befor ? '' : 'selectRep'}}"
+		>{{item.date}}</view>
+	</view>
+</view>

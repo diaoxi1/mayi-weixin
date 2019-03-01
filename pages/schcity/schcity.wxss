@@ -1,0 +1,51 @@
+/* pages/schcity/schcity.wxss */
+.top{
+  width:90% ;
+  height: 65rpx;
+  background: gainsboro;
+  margin-left: 5%;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.img{
+ padding-left: 20rpx;
+  width:50rpx ;
+  height: 65rpx;
+  display: flex;
+  align-items: center;
+}
+.img image{
+  height: 45rpx;
+  width:45rpx;
+}
+.inp input{
+  margin-left: 15rpx;
+  height: 65rpx;
+}
+.show{
+  width: 90%;
+  margin-left: 5%;
+}
+.bog_show_1{
+  display: flex;
+}
+
+.show_1,.show_3{
+  margin-right: 50rpx;
+  color:red;
+  margin-top: 30rpx;
+}
+.show_3{
+    color:black;
+    margin-top: 26rpx;
+    border: 1px solid gainsboro;
+    padding: 1rpx;
+    width:100rpx;
+    text-align: center;
+}
+.show_2{
+  margin: 20rpx;
+  height:60rpx;
+  border-bottom: 1px solid gainsboro;
+}

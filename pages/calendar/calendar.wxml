@@ -1,0 +1,27 @@
+<calendar 
+	currentYear='{{year}}'
+	currentMonth="{{month}}"
+	houseid='{{houseid}}'
+	bindsendObj='getCalendarData'
+></calendar>
+<calendar 
+	currentYear='{{year}}'
+	currentMonth="{{month+1}}"
+	houseid='{{houseid}}'
+	bindsendObj='getCalendarData'
+></calendar>
+
+<calendar 
+	currentYear='{{year}}'
+	currentMonth="{{month+2}}"
+	houseid='{{houseid}}'
+	bindsendObj='getCalendarData'
+></calendar>
+
+<calendar 
+	currentYear='{{year}}'
+	currentMonth="{{month+3}}"
+	houseid='{{houseid}}'
+	bindsendObj='getCalendarData'
+></calendar>
+

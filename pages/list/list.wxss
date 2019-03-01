@@ -1,0 +1,121 @@
+/* pages/list/list.wxss */
+.top{
+  width:90% ;
+  height: 65rpx;
+  background: gainsboro;
+  margin-left: 5%;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.img{
+ padding-left: 20rpx;
+  width:50rpx ;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.img image{
+  height: 45rpx;
+  width:45rpx;
+}
+.show1_1{
+  width: 100%;
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.show1 image{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30rpx;
+}
+
+.inp input{
+  margin-left: 15rpx;
+  height: 65rpx;
+}
+.content{
+  border-radius: 5rpx;
+  position: relative;
+  margin-top: 15rpx;
+  width: 90%;
+  margin-left: 5%;
+  /* border: 1px solid red; */
+  height: 400rpx;
+}
+.content image{
+  border-radius: 5rpx;
+  width:100%;
+  height: 100%;
+
+}
+
+
+.img2 image{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  right: 20rpx;
+  top:10rpx;
+}
+.img3{
+  position: absolute;
+  background: #2b2f33;
+  color:white;
+  bottom:1rpx;
+  width:120rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.img4 image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -40rpx;
+  right: 20rpx;
+}
+.box{
+  margin-top: 40rpx;
+  width: 90%;
+  margin-left: 5%;
+}
+.box1,.box2,.box3{
+  height: 50rpx;
+  display: flex;
+  margin-top: 20rpx;
+}
+.box1_1{
+  background: #FF9300;
+  font-size: 24rpx;
+  width: 12%;
+  line-height: 50rpx;
+  color: white;
+  text-align: center;
+}
+.box1_2{
+  margin-left: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+}
+.box2 view{
+ margin-right: 5%;
+ font-size: 30rpx
+}
+.box3 image{
+ vertical-align: middle;
+ width:35rpx;
+ height: 35rpx;
+ display: inline-block;
+ margin-right: 20rpx;
+}
+.box3{
+  font-size: 30rpx;
+  height: 70rpx;
+}

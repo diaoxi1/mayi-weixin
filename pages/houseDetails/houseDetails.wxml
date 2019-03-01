@@ -1,0 +1,219 @@
+<view class='body'>
+<!-- 1 -->
+<swiper current='{{index}}' bindchange='onSlideChange' bindtap='bigImg'>
+	<swiper-item wx:for='{{imgArr}}' wx:key="key">
+		<image src='http://120.77.213.16{{item.img_url}}'></image>
+	</swiper-item>
+</swiper>
+<!-- 2 基本信息 -->
+<view class='box2'>
+<view class='view2'>
+	<text class='name'>{{houseName}}</text>
+	<view class='view2_box'>
+		<view class='view2_child'>
+			<image src='http://staticnew.mayi.com/resourcesWap/v2018/lodgeDetail/images/door_icon.png'></image>
+			<view class='view2_child_text'>
+				<text>{{Houser_Type}}\n</text>
+				<text>{{House_square}}</text>
+			</view>
+		</view>
+		<view class='view2_child'>
+			<image src='http://staticnew.mayi.com/resourcesWap/v2018/lodgeDetail/images/detail-icon.png'></image>
+			<view class='view2_child_text2'>
+				<text>{{Houser_Bed}}\n</text>
+				<text>{{Houser_Bed_size}}</text>
+		</view>
+		</view>
+	</view>
+</view>
+</view>
+<!-- 3 房客评价 -->
+<view class='box3'>
+	<text class='box3_title'>房客评价</text>
+<swiper class='view3_swiper' bindtransition='transition' bindanimationfinish='animationfinish'>
+<view wx:if='{{userEva.length}}'>
+	<swiper-item wx:for='{{userEva}}' wx:key="key">
+		<view class='view3'>
+			<view class='view3_text' style='color:{{color}}'>
+				<text>{{item.house_comment_Score}} </text>
+				<text>分  完美</text>
+			</view>
+		</view>
+		<view class='view3_swiper_text'>
+			<text>{{item.house_comment_Text}}</text>
+		</view>
+		<view class='view3_swiper_user'>
+		 	<image src='http://120.77.213.16{{item.avatarUrl}}'></image>
+			<text>{{item.nickName}}</text>
+		</view>
+	</swiper-item>
+</view>
+	<view wx:else>
+		<swiper-item class='box3_else'>
+			<text>暂无评论</text>
+		</swiper-item>
+	</view>
+
+</swiper>
+</view>
+
+<!-- 4 房源介绍 -->
+<view class='box4'>
+<view class='view4'>
+	<view><text>房源介绍</text></view>
+	<view class='view4_user'>
+		<image src='http://120.77.213.16{{landlordImg}}'></image>
+		<text style='margin-left:20rpx'>{{landlordName}}</text>
+	</view>
+	<view class="view4_text {{ellipsis?'ellipsis':'unellipsis'}}'" bindtap='introduce'>
+		{{describe}}
+	</view>
+</view>
+</view>
+
+<!-- 5 地图 -->
+<view class='box5'>
+<view class='view5'>
+	<text>房源位置</text>
+</view>
+<map id="myMap" style="width: 100%; height: 470rpx;" latitude="{{latitude}}"
+ longitude="{{longitude}}" markers="{{markers}}" show-location enable-zoom bindtap='myMap' include-points>
+	<cover-view style='width:100%;height:30%'></cover-view>
+	<cover-view style='width:100%;height:30%;margin-top:180rpx;'></cover-view>
+ </map>
+</view>
+
+<!-- 6 入离日期 -->
+<view class='box6'>
+<view class='view6'>
+	<text>入离日期</text>
+	<view class='view6_box' bindtap='goDate'>
+		<view>
+			<text class='view6_time'>入住时间</text>
+			<view class='view6_date'>
+				<text>{{nowDate}}</text>
+			</view>
+		</view>
+		<text class='view6_box_center'>{{night}}晚</text>
+		<view class='view6_box_child'>
+			<text class='view6_time'>离开时间</text>
+			<view class='view6_date'>
+				<text>{{tomDate}}</text>
+			</view>
+		</view>
+	</view>
+</view>
+</view>
+
+<!-- 7 预订须知 -->
+<view class='box7'>
+<view class='view7'>
+	<view><text>预订须知</text></view>
+	<view class="view7_box {{height?'height':'unheight'}}">
+		<view>  <!-- 1 -->
+			<view>
+				<image src=''></image>
+				<text>入住须知</text>
+			</view>
+			<view class='view7_text'>
+				<text>入住时间：  14:00以后</text>
+				<text>退房时间：  12:00之前</text>
+				<text>接待时间：  00:00-24:00</text>
+			</view>
+		</view>
+		<view>  <!-- 2 -->
+			<view>
+				<image src=''></image>
+				<text>押金</text>
+			</view>
+			<view class='view7_text'>
+				<text>线下收押金：  ￥300</text>
+			</view>
+		</view>
+		<view>  <!-- 3 -->
+			<view>
+				<image src=''></image>
+				<text>开具发票</text>
+			</view>
+			<view class='view7_text'>
+				<text>不提供开具发票</text>
+			</view>
+		</view>
+		<view>  <!-- 4 -->
+			<view>  
+				<image src=''></image>
+				<text>房客须知</text>
+			</view>
+			<view class='view7_text'>
+				<text>吸烟：  禁止吸烟</text>
+				<text>宠物：  允许带宠物</text>
+				<text>加人：  允许加人</text>
+			</view>
+		</view>
+	</view>
+	<view class='view7_expand' bindtap='expand'><text>{{expand}}</text></view>
+</view>
+</view>
+
+<!-- 8 附近同类房源 -->
+<view class='box8'>
+<view class='view8'>
+	<text>附近同类房源</text>
+<movable-area>
+	<view wx:if='{{nearly.length}}'>
+		<movable-view direction='horizontal' style="width:{{widNearly+'%'}}">
+			<view class='view8_each' wx:for='{{nearly}}' wx:key="key" bindtap='nearlyTo' data-item='{{item}}'>
+				<image src='http://120.77.213.16{{item.img_url}}'></image>
+				<text>￥{{item.House_Price}}</text>
+				<view class='view8_name'><text>{{item.Houser_name}}</text></view>
+				<text>{{item.House_address}}</text>
+			</view>
+		</movable-view>
+	</view>
+		<view wx:else>
+			<movable-view class='noRecommendation'>
+				<text>暂无推荐</text>
+			</movable-view>
+		</view>
+</movable-area>
+</view>
+</view>
+
+<!-- 9 房东其他房源 -->
+<view class='box8'>
+<view class='view8'>
+	<text>房东其他房源</text>
+<movable-area>
+<view wx:if='{{houseRecommend.length}}'>
+	<movable-view direction='horizontal' style="width:{{width+'%'}}">
+		<view class='view8_each' wx:for='{{houseRecommend}}' wx:key="key" bindtap='nearlyTo' data-item='{{item}}'>
+			<image src='http://120.77.213.16{{item.img_url}}'></image>
+			<text>￥{{item.House_Price}}</text>
+			<view class='view8_name'><text>{{item.Houser_name}}</text></view>
+			<text>{{item.House_address}}</text>
+		</view>
+	</movable-view>
+	</view>
+		<view wx:else>
+			<movable-view direction='horizontal' id='noRecommendation'>
+				<text>暂无推荐</text>
+			</movable-view>
+		</view>
+</movable-area>
+</view>
+</view>
+
+<view style='width:100%;height:100rpx;'></view>
+
+<!-- 10 立即预定 -->
+<view class='box10'>
+<view class='view10'>
+	<text>￥{{House_Price}}  (共{{night}}晚)</text>
+	<view class='view10_right'>
+		<image src='http://staticnew.mayi.com/resourcesWap/v2018/lodgeDetail/images/flash.png'></image>
+		<text decode="{{true}}" bindtap='reservation' data-item='{{item}}'>&nbsp;立即预定</text>
+	</view>
+</view>
+</view>
+
+</view>

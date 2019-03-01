@@ -1,0 +1,62 @@
+.calendar {
+  width: 720rpx;
+  margin: 0 auto;
+}
+
+.calendar .tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: #2a2a2a;
+}
+
+.calendar .tit .current {
+  margin: 0 40rpx;
+}
+
+.calendar .tit .pre {
+  width: 150rpx;
+  text-align: right;
+}
+
+.calendar .tit .next {
+  width: 150rpx;
+  text-align: left;
+}
+
+.calendar .content {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.calendar .content view {
+  width: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 34rpx;
+  color: #2a2a2a;
+  /* background: rgb(224, 199, 199); */
+  margin: 10rpx 1rpx;
+  box-sizing: border-box;
+}
+
+.calendar .content .gray {
+  color: #999;
+}
+
+.calendar .content .befor {
+  color: #666;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8rpx;
+}
+
+.calendar .content .checked {
+  background: rgba(32, 204, 146, 1);
+  border-radius: 8rpx;
+  color: #fff;
+}

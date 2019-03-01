@@ -1,0 +1,100 @@
+<!-- 订单房屋信息 -->
+<view class='house'>
+  <image src='{{house_photo}}'></image>
+  <view class='house-info'>
+        <text>{{house_info}}</text>
+        <text>整租 | {{house_type}} | {{house_bed}}</text>
+  </view>
+</view>
+ 
+ <view class='space'></view>
+
+<!-- 订单入住与离开时间 -->
+<view class='status'>
+  <view class='intime'>入住时间 </view>
+  <view class='leavetime'>离开时间 </view>
+</view>
+<view class='time'>
+  <view class='intime'>{{in_time}}</view>
+  <view><text class='line'>——</text></view>
+  <view class='leavetime'>{{leave_time}}</view>
+</view>
+<!-- 房源数量 -->
+<view class='message'>
+<text>房源数量</text>
+<!-- <text>1套</text> -->
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+</view> 
+
+<!-- 入住人数 -->
+<view class='message'>
+<text>入住人数</text>
+<input type='number' placeholder="必填，最多住{{more_people}}人" class='house-people {{bg?"bg1":"bg-status"}}' maxlength='2' bindinput='peopleInput' name='people' bindblur='peopleBlur'/>
+</view>
+
+<view class='space'></view>
+<!-- 联系人 -->
+<view class='message'>
+<text>联系人</text>
+<input placeholder='填写真实姓名'maxlength='4'bindinput='contactNameInput' bindblur='contactNmaeBlur'/>
+</view>
+
+<!-- 手机号 -->
+<view class='message'>
+<text>手机号</text>
+<input type='number' placeholder='请输入手机号' maxlength='11' bindinput='telInput' name='tel' bindblur='telBlur'/>
+</view>
+
+<view class='space'></view>
+<!-- 入住人信息 -->
+<view class='message' style='border:none'>入住人信息（只需一位）</view>
+<view class='message'>
+<text>姓名</text>
+<input placeholder='请填写证件上的姓名' maxlength='4' bindinput='checkNameInput' name='name' bindblur='checkNameBlur'/>
+</view>
+<view class='message'>
+<text>身份证号</text>
+<input type='idcard' placeholder='请填写对应证件号码' maxlength='18' bindinput='checkIdInput' bindblur='checkIdBlur'/>
+</view>
+
+<view class='space'></view>
+
+<!-- 房屋总额 -->
+<view class="message" data-index="0" bindtap='changeToggle'>
+  <text decode="{{true}}">房屋总额&nbsp;&nbsp;({{totalprice}}x100%)</text>
+  <view>
+    <view>
+      <text>￥{{totalprice}}</text>
+      <image src='{{isFold?arrow[0]:arrow[1]}}' class='arrow' bindtap='changeToggle'></image>
+    </view>  
+  </view>
+</view>
+<view hidden="{{!selectedFlag[0]}}">
+    <view class='price-info'>
+      <view class='count'>1套共{{totalday}}晚</view>
+      <view wx:for="{{newdayarray}}" wx:key='index'  class='price-info-nav' wx:for-index='index' wx:if='{{index!==new_len-1}}'>
+      <!-- wx:for-index="index" wx:if="{{index < dayarray_len-1}}"  wx:if='{{index!==0 && index!==new_len-1}}' -->
+        <view>日期<text>{{item.day}}</text></view>
+        <view>单价<text>{{item.price}}</text></view>
+        <view>数量<text>{{item.count}}</text></view>
+        <view>小计<text>{{item.price}}</text></view>
+      </view>
+    </view>
+</view>
+ <view class='payto'>
+    <text>线上支付到蚂蚁</text>
+    <text>￥{{price*totalday}}</text>
+ </view>
+<view class='spaceall'></view>
+<!-- 提交订单 -->
+<view class='pay'>
+    <text>线上支付：</text>
+    <text>￥{{totalprice}}</text>
+    <button bindtap='go'>提交订单</button>
+</view>
+
+ 

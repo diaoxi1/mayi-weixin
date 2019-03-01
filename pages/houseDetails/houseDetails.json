@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+	},
+	"backgroundTextStyle": "dark",
+	"navigationBarBackgroundColor": "#fff",
+	"navigationBarTitleText": "房源详情",
+	"navigationBarTextStyle": "black"
+}

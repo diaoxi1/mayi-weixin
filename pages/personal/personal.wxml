@@ -1,0 +1,36 @@
+<!--pages/personal/personal.wxml-->
+<!-- 登录/注册 -->
+<view class='loginBox'>
+  <view class='loginDis'>
+    <view class='circle'>
+    <!-- <i class='iconfont icon-gerenzhongxin'></i> -->
+      <image src='{{logoimg}}'></image>
+    </view>
+    <text bindtap='hasLogin' data-infotxt="login">{{loginStatus}}</text>
+
+  </view>
+</view>
+<!-- 个人信息 -->
+<view class='newsBg'>
+  <view class='content'>
+    <view class='order' bindtap='myorder' data-infotxt="order">
+      <i class='iconfont icon-wodedingdan'></i>
+      <text>我的订单</text>
+      <i class='iconfont icon-dayu arrow'></i>
+    </view>
+    <view class='suggestion' bindtap='gotoSgt' data-infotxt="suggest">
+      <i class='iconfont icon-yijianfankui'></i>
+      <text>意见反馈</text>
+      <i class='iconfont icon-dayu arrow'></i>
+    </view>
+    <view class='contact' bindtap='gotokefu'>
+      <i class='iconfont icon-lianxikefu'></i>
+      <text>联系客服</text>
+      <i class='iconfont icon-dayu arrow'></i>
+    </view>
+  </view>
+</view>
+<button class='quit' bindtap='loginOut' style='display:{{showMethod}}'>退出登录</button>
+<!-- footer -->
+
+

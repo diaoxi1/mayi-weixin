@@ -1,0 +1,22 @@
+<!--pages/schcity/schcity.wxml-->
+<!-- 头部搜索功能 -->
+<view class='top'>
+  <view class='img'  bindtap='btn1' >
+      <image src='http://120.77.213.16/icon/serch.png' ></image>
+  </view>
+  <view class='inp'> 
+    <input type='text' placeholder='请输入...' value='{{city}}' bindinput='input' focus></input>
+  </view>
+</view>
+
+<!-- 城市列表 -->
+<view class='show'>
+  <view class='bog_show_1' >
+      <view class='show_1'>热门推荐</view>
+      <view class='show_3' bindtap='btn2' data-city='{{data[0].Ctiy_name}}'>{{data[0].Ctiy_name}}</view>
+      <view class='show_3' bindtap='btn2' data-city='{{data[1].Ctiy_name}}'>{{data[1].Ctiy_name}}</view>
+  </view>
+    <view class='show_2'  wx:for='{{data}}' wx:key='index' bindtap='btn2' data-city='{{item.Ctiy_name}}' > 
+      {{item.Ctiy_name}}
+    </view>  
+</view>

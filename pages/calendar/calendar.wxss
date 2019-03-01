@@ -1,0 +1,4 @@
+/* pages/calendar/calendar.wxss */
+.calendar .content .check{
+  color: red;
+}

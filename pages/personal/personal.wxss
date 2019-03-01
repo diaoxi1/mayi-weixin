@@ -1,0 +1,122 @@
+/* pages/personal/personal.wxss */
+@import '../IconFont/iconfont.wxss';
+page{
+  height: 100%;
+}
+.loginBox{
+  background: rgb(61,179,129);
+  width: 100%;
+  height: 350rpx;
+  position: relative;
+}
+.loginDis{
+  width:90%;
+  height: 140rpx;
+  /* border: 1px solid darkblue; */
+  position: absolute;
+  top: 50%;
+  margin-top: -95rpx;
+  left: 5%; 
+}
+.loginDis image{
+  width: 100%;
+  height: 100%; 
+ border-radius: 50%; 
+  
+  /* display: inline-block; */
+  
+  /* margin-top: 35rpx; */
+}
+.circle{
+  width:140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  /* background: #fff; */
+  display: inline-block;
+  text-align: center;
+} 
+.loginDis text{
+  font-size: 16px;
+  line-height: 140rpx;
+  display: inline-block;
+  position: absolute;
+  margin-left: 40rpx;
+  color: #fff;
+}
+.icon-gerenzhongxin{
+  font-size: 70rpx;
+  color: rgb(73, 198, 151);
+  line-height: 140rpx;
+}
+.newsBg{
+  width:100%;
+  position: relative;
+  margin-top: -50rpx;
+  /* border: 1px solid darkblue; */
+}
+.content{
+  box-sizing: border-box;
+  position: absolute;
+  width: 90%;
+  left:5%;
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 1px 0px 2px 1px rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+
+}
+.content view{
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.content view:last-child{
+  border: none;
+}
+.content view i{
+  font-size: 66rpx;
+  color: rgb(73, 198, 151);
+  line-height: 70rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+.content view text{
+   display: inline-block;
+  font-size:14px;
+  color:#000;
+  /* line-height: 70rpx; */
+}
+.content .arrow{
+  font-size: 30rpx;
+  color:rgb(235, 235, 235);
+  position: absolute;
+  right: 0;
+}
+.content .icon-yijianfankui{
+  font-size: 44rpx;
+  margin-left: 11rpx;
+}
+.quit{
+  position:absolute;
+  top: 780rpx;
+  left: 50%;
+  width: 440rpx;
+  height: 82rpx;
+  margin-left: -220rpx;
+  border: 0px;
+  background: #fff;
+  box-shadow: 1px 0px 2px 1px rgb(240, 240, 240);
+   font-size: 14px;
+  color: rgb(53, 53, 53);
+  text-align: center;
+  line-height: 82rpx;
+}
+button::after {
+  border: none;
+}

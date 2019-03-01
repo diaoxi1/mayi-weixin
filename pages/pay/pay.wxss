@@ -1,0 +1,38 @@
+/* pages/pay/pay.wxss */
+.box{
+  width: 100%;
+}
+.message{
+  display: flex;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #5e646b;
+  padding: 30rpx;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #5e646b;
+  padding: 30rpx;
+  border-bottom: 0.5rpx solid #ebebeb;
+}
+.pay{
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+  color: black;
+  padding: 30rpx;
+}
+.pay text{
+  display: block;
+}
+.price{
+  display: flex;
+  justify-content: space-around;
+  font-size: 40rpx;
+  color: black;
+}
+.price button{
+  color: #20C673;
+}

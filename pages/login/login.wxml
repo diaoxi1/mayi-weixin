@@ -1,0 +1,8 @@
+<view class='loginBg'>
+  <text>一键授权登录</text>
+</view>
+<view class='imgBg'>
+  <image src='http://img.027cgb.com/615308/11.jpg' bindtap='goLogin'></image>
+  <text>授权微信登录</text>
+</view>
+<view class='reminder'> <text >*未注册的手机号将自动创建为短租用户</text></view>

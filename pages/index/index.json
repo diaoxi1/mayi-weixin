@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh": true,
+			"backgroundTextStyle": "dark",
+			"navigationBarBackgroundColor": "#fff",
+			"navigationBarTitleText": "蚂蚁短租",
+			"navigationBarTextStyle": "black"
+}

@@ -1,0 +1,12 @@
+<!--pages/feedback/feedback.wxml-->
+
+<view class='bigBg'>
+  <text>您的问题或建议</text>
+  <textarea placeholder-class='phsize' placeholder="请简要描述你在使用产品过程中的问题或建议" bindinput='getTxt' value='{{concent}}' focus="{{focus}}" disabled='{{disabled}}'></textarea>
+  <button bindtap='submitsgt'>提交建议</button>
+</view>
+<!-- <view>
+     <toast hidden="{{hidden}}" duration="2500" bindchange="open" bindtap="close">
+        成功
+    </toast>
+</view> -->

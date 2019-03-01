@@ -1,0 +1,50 @@
+<!--pages/list/list.wxml-->
+
+<!-- 头部搜索功能 -->
+<view class='top' bindtap='input'>
+  <view class='img' bindtap='btn'>
+    <image src='http://120.77.213.16/icon/serch.png'></image>
+  </view>
+      {{city}}
+    <!-- <input type='text' placeholder='请输入...' value='{{city}}' bindfocus='input' '></input> -->
+
+</view>
+<!-- 主题内容部分 -->
+<view wx:if="{{!data.length}}" class='show1'>
+  <image src='http://120.77.213.16/icon/fiter_none.png'></image>
+  <view class='show1_1'> 暂时没有更多信息........</view>
+</view>
+<view wx:if="{{data.length}}" class='big_box' wx:for='{{data}}' wx:key='index' data-item='{{item}}' bindtap='btn2' id='big_box'>
+  <view class='content'>
+    <image src='http://120.77.213.16{{item.img_url}}' lazy-load ></image>
+    <view class='img2'>
+      <image src='{{images2[0].url1}}' lazy-load></image>
+    </view>
+    <view class='img3'>
+      <text>￥{{item.House_Price}}</text>
+    </view>
+    <view class='img4'>
+      <image src='http://120.77.213.16{{item.avatarUrl}}'  lazy-load></image>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='box1'>
+      <view class='box1_1'>{{text2[0].text1}}</view>
+      <view class='box1_2'>{{item.Houser_name}}</view>
+    </view>
+    <view class='box2'>
+      <view>{{item.House_pf}}分</view>
+      <view> | </view>
+      <view>{{item.Houser_Type}}</view>
+      <view> | </view>
+      <view>{{item.Houser_Bed}}</view>
+    </view>
+    <view class='box3'>
+      <view>
+        <image src='{{text2[1].url}}'></image>
+      </view>
+      <view>{{item.House_address}}</view>
+    </view>
+  </view>
+</view>

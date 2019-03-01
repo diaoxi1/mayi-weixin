@@ -1,0 +1,51 @@
+/* pages/order/order.wxss */
+page{
+  background: #f6faf9;
+}
+.myorderinfo{
+   box-shadow: 1px 1px 2px 1px rgb(240, 240, 240);
+   box-sizing: border-box;
+   padding: 24rpx;
+   margin-top: 20rpx;
+}
+.myorderinfo text{
+  display: block;
+  font-size: 14px;
+  line-height: 52rpx;
+}
+.myorderinfo text:first-child{
+  color: rgb(73, 198, 151);
+}
+.myorderinfo text:nth-child(n+3){
+  color:rgb(177, 177, 177);
+  font-size: 12px;
+}
+.alertpro {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 230rpx;
+
+}
+.judgeshow{
+  display: none;
+}
+.alertpro image{
+  width: 312rpx;
+  height: 440rpx;
+}
+.alertpro text{
+  font-size: 14px;
+  display: block;
+  color: rgb(139, 139, 139);
+   margin-top: 60rpx;
+}
+.alertpro button{
+  width: 90%;
+  height: 88rpx;
+  background: rgb(73, 198, 151);
+  color: #fff;
+  text-align: center;
+  line-height:88rpx;
+  margin-top: 100rpx;
+}

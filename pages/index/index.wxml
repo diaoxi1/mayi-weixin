@@ -1,0 +1,42 @@
+<!-- swiper -->
+<view class='banner mycontainer'>
+  <swiper indicator-dots autoplay circular indicator-color='#fff' indicator-active-color='rgba(0,0,0,.4)' duration='700' interval='4000'>
+    <swiper-item wx:for='{{bannerSrc}}' wx:key='index'>
+      <image src='{{item.url}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- search -->
+<view class='search mycontainer'>
+  <view class='local'>
+    <text>{{nowCity}}</text>
+    <image src='http://staticnew.mayi.com/duanzu/resourcesWap/index/images/homePage_nearby_03.png' bindtap='localtion'></image>
+  </view>
+  <view class='date'>
+    <text bindtap='goCale'>{{nowDate}}<text class='small'>今天</text></text>
+    <text class='small'>{{night}}晚</text>
+    <text bindtap='goCale'>{{tomDate}}<text class='small'>即日</text></text>
+  </view>
+  <button type='primary' bindtap='goSearch'>搜索</button>
+</view>
+<!-- hot -->
+<view class='hot mycontainer'>
+  <text>热门目的地</text>
+  <view class='hotPlace'>
+    <view wx:for='{{hotPlace}}' wx:key='index' data-current='{{index}}' class="hotPlaceItem {{currentTab==index?'active':''}}" bindtap='clickTab'>{{item.Ctiy_name}}
+      <view class="{{currentTab==index?'line':''}}"></view>
+    </view>
+  </view>
+  <view wx:for='{{hotPlace}}' wx:key='index' class="itemWrap " wx:if="{{currentTab == index? true:fasle}}">
+    <view class='hotItem' wx:key='index' wx:for='{{item.cityList}}' wx:if='{{index<4}}' bindtap='goHouseDeta' data-item='{{item}}'>
+      <image src='http://120.77.213.16{{item.img_url}}'></image>
+      <text>{{item.Houser_name}}</text>
+      <text>{{item.House_pf}}分 <block wx:if="{{item.House_pf==5}}">完美 ! </block> · {{item.Houser_Bed}}</text>
+      <text>￥{{item.House_Price}}</text> 
+    </view>
+    <block wx:if="{{index>1}}">
+    <image src='http://120.77.213.16/icon/fiter_none.png'></image>
+    </block>
+    <view class='checkMore' data-city='{{item.Ctiy_name}}' bindtap='goMore'>查看更多</view>
+  </view>
+</view>

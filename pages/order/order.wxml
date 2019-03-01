@@ -1,0 +1,12 @@
+<!--pages/order/order.wxml-->
+<view wx:for="{{orderInfo}}" class='myorderinfo' >
+  <text>{{nowTime>=item.outCheck_time?'已入住':'未入住'}}</text>
+  <text>{{item.Houser_name}}</text>
+  <text>{{item.check_time}} - {{item.outCheck_time}}共{{item.days}}晚</text>
+  <text>订单总额：￥{{item.Price}}</text>
+</view>
+<view class="alertpro {{isLogin==true?'judgeshow':''}}">
+  <image src='http://img.027cgb.com/615308/no_login.png'></image>
+  <text>阿哦，你还没有登录哦！</text>
+  <button bindtap='goLogin' data-infotxt='imelogin'>立即登录</button>
+</view>
